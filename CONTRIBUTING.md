@@ -3,51 +3,16 @@
 To start, thank you for considering contributing to this project. Having contributors such as yourself allow us to develop our website further, and to a high quality, which is very appreciated.
 
 ## Getting Started
-To begin, if you haven't looked through the [Code of Conduct](https://github.com/fn5-310/movie-recommender/blob/main/CODE_OF_CONDUCT.md) to understand the behaviour we are looking to cultivate in our community.
+To begin, please look through our [Code of Conduct](https://github.com/fn5-310/movie-recommender/blob/main/CODE_OF_CONDUCT.md) if you haven't already, to understand the behaviour we are looking to cultivate in our community.
 
-Generally speaking, unlike most open-source projects, we do not have tasks labelled as "good first issue", as the project is small enough in scope such that anyone can contribute, regardless of their skill level.
+Furthermore, also refer to the [README.md](README.md) for the initial setup instructions for running the project - this is also required to work on the project.
 
-### Setup
-Regarding prerequisite programs, Node.js is required to run the project. This can be downloaded at [https://nodejs.org/en/download](https://nodejs.org/en/download). You can confirm that the install is successful by running the below commands in the terminal of your OS:
-```
-node --version
-npm --version
-npx --version
-```
+## Contribution Model
 
-After this, the repo can be forked and cloned. We recommend using an IDE such as [VSCode](https://code.visualstudio.com/) to work on the project for linting and syntax validation.
+## Code Editor
+We recommend using an IDE such as [VSCode](https://code.visualstudio.com/) to work on the project for linting and syntax validation.
 
-The project installs the node dependencies from the root by running the below command:
-```shell
-npm run install:all
-```
-
-### Setting up your `.env` file
-
-Because the website uses TMDB, you must have an API Key for API Read Access Token for TMDB.
-Go to `server/` and rename `.env.example` to `.env`, pasting in your key or access token as required. Your `.env` file may look like this once completed:
-```
-PORT=5000
-CLIENT_URL=http://localhost:5173
-TMDB_ACCESS_TOKEN=insertApiReadAccessTokenHere
-TMDB_KEY=insertApiKeyHere
-```
-
-Currently we also require a `.env` file for `client/` as well. In `client/.env`:
-```
-VITE_MOVIE_API_KEY=insertApiKeyHere
-```
-
-### Running the Website
-The dev servers for both the ExpressJS server and React client can be run concurrently through one command:
-```
-npm run dev
-```
-
-To run tests, run the below command:
-```
-placeholder (command doesn't exist)
-```
+Regarding IDE extensions, we heavily recommend using [SonarLint](https://www.sonarsource.com/products/sonarqube/ide/) to ensure code is of a high quality and free of any potential security vulnerabilities.
 
 ## Architecture Overview
 The project is split into two folders, the `client/` and `server/`. Both run on different ports on the dev server, and uses CORS to interact between them.
@@ -84,17 +49,14 @@ After submitting, a team member will review your work, request changes, and appr
 
 Congratulations! You have successfully contributed to the `movie-recommender` project!
 
-## Extensions
-Per assignment details, [SonarLint](https://www.sonarsource.com/products/sonarqube/ide/) is required when writing code to ensure formatting is correct and security vulnerabilities are minimised.
-
 ## Creating Tests
-`vitest` is used for all test cases, and follows an approximate structure:
+`vitest` is used for all test cases, and roughly follows the below structure:
 
 ```js
 describe("TestSuiteName", () => {
     it("TestCaseName", async () => { // may not be async depending on test type
         const result = testFunction(arg1, arg2);
-        expect(result).toBe(`${arg1}-${arg2}`)
+        expect(result).toBe(`${arg1}-${arg2}`) // toBe checks identity of result and string - use toEqual for equality
     })
     it("TestCaseName2", async () => {
         const result = testFunction(arg1);
@@ -105,6 +67,11 @@ describe("TestSuiteName", () => {
 Given the above structure, each `it()` call makes one test case, while describe groups these tests together.
 
 The test file for a function should be in the same folder as the file being tested, appending `.spec` before the file extension, e.g. `client/testFunction.ts` will have a test file `client/testFunction.spec.ts`.
+
+To run tests:
+```
+npm run test
+```
 
 ### Frontend
 Frontend tests make use of the react testing library, and work by emulating a DOM and rendering the components used.
