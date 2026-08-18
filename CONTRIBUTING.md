@@ -8,7 +8,7 @@ To begin, please look through our [Code of Conduct](CODE_OF_CONDUCT.md) if you h
 Furthermore, also refer to the [README.md](README.md) for the initial setup instructions for running the project - this is also required to work on the project.
 
 ## Contribution Model
-Like most open-source projects, we utilise a fork-and-pull model. Contributors fork from the main repository, make a branch encapsulating their changes, and once ready can submit a pull request from their forked branch to the `main` branch of the main repository.dsd
+Like most open-source projects, we utilise a fork-and-pull model. Contributors fork from the main repository, make a branch encapsulating their changes, and once ready can submit a pull request from their forked branch to the `main` branch of the main repository.
 
 ## Code Editor
 We recommend using an IDE such as [VSCode](https://code.visualstudio.com/) to work on the project for linting and syntax validation.
