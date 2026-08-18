@@ -53,3 +53,6 @@ The frontend server will be open on `localhost:5000` by default, while the backe
 If you want to contribute or learn more about the project, please consider viewing the [Contributor Guidelines](CONTRIBUTING.md).
 
 You may also wish to view our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Contact
+To reach out to a team member of fn5, feel free to reach out in person (group 5), or to email at `placeholderemail@placeholder.com`
