@@ -44,7 +44,7 @@ The dev servers for both the ExpressJS server and React client can be run concur
 ```
 npm run dev
 ```
-The frontend server will be open on `localhost:5000` by default, while the backend server will be at `localhost:5173`.
+The frontend server will be open on `localhost:5173` by default, while the backend server will be at `localhost:5000`.
 
 ## License
 `movie-recommender` is licensed under the [MIT License](LICENSE).
