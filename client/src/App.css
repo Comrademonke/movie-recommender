@@ -1,79 +1,58 @@
 #search-page {
-  padding: 32px 20px;
-  flex-grow: 1;
+  min-height: 100vh;
+  background-color: #0c0c0f;
+  color: #e8e4de;
 }
 
-.search-bar {
+#search-page > h1 {
+  display: none;
+}
+
+.filter-toggle {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-}
-
-.search-bar__input {
-  width: 100%;
-  max-width: 420px;
-  font: inherit;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg);
-  color: var(--text-h);
-
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.search-results__grid {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px;
-  padding: 0;
-  margin: 0;
-}
-
-.search-results__card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 8px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg);
+  gap: 0.4rem;
+  margin: 1rem auto 0;
+  background: none;
+  border: none;
   cursor: pointer;
-  text-align: left;
-
-  &:hover {
-    box-shadow: var(--shadow);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #4a4852;
+  transition: color 0.2s;
+  padding: 0.25rem 0.75rem;
 }
 
-.search-results__poster {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 4px;
-  background: var(--code-bg);
+.filter-toggle:hover {
+  color: #9b96a3;
 }
 
-.search-results__title {
-  display: block;
-  font-weight: 600;
-  color: var(--text-h);
+.filter-toggle__icon {
+  display: inline-block;
+  transition: transform 0.25s;
 }
 
-.search-results__year {
-  display: block;
-  font-size: 14px;
+.filter-toggle__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #c8a96e;
+  flex-shrink: 0;
 }
 
-.search-results--empty {
-  padding: 32px;
+.filter-panel-wrap {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.filter-panel-wrap--open {
+  max-height: 600px;
+  opacity: 1;
 }
