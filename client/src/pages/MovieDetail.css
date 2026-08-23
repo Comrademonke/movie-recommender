@@ -182,7 +182,7 @@
   padding: 14px 36px;
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
+  color: #1a1a2e;
   background: linear-gradient(135deg, #f7971e, #ffd200);
   border: none;
   border-radius: 50px;
@@ -312,11 +312,11 @@
   position: relative;
   z-index: 1;
   letter-spacing: 2px;
+  animation: textPulse 2s ease-in-out infinite;
 }
 
 .loading-dots {
   display: inline-block;
-  animation: dotPulse 1.4s ease-in-out infinite;
 }
 
 .loading-dots::after {
@@ -340,10 +340,6 @@
   100% {
     content: "";
   }
-}
-
-.loading-text {
-  animation: textPulse 2s ease-in-out infinite;
 }
 
 @keyframes textPulse {

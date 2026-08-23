@@ -106,8 +106,7 @@ export default function MovieDetail() {
             <div className="loading-ring" />
           </div>
           <p className="loading-text">
-            Loading movie details
-            <span className="loading-dots" />
+            Loading movie details <span className="loading-dots" />
           </p>
         </div>
       </div>
