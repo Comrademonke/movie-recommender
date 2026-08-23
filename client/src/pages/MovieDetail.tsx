@@ -105,15 +105,30 @@ export default function MovieDetail() {
   //Error page section
   if (error || !movie) {
     return (
-      <div className="message-container">
-        <h1>{error || "Movie not found"}</h1>
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="back-button"
-        >
-          Go back
-        </button>
+      <div className="page-container">
+        <div className="error-container">
+          <span className="error-icon">🎥</span>
+
+          <h1 className="error-title">
+            {error === "Movie not found" ? "404" : "Oops!"}
+          </h1>
+
+          <p className="error-message">{error || "Movie not found"}</p>
+
+          <p className="error-hint">
+            The film you're looking for might have been moved, deleted,
+            <br />
+            or never existed 💀
+          </p>
+
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="error-back-button"
+          >
+            <span className="arrow">←</span> Back to Search
+          </button>
+        </div>
       </div>
     );
   }
