@@ -99,7 +99,19 @@ export default function MovieDetail() {
 
   //loading section
   if (loading) {
-    return <div className="message-container">Loading movie details…</div>;
+    return (
+      <div className="page-container">
+        <div className="loading-container">
+          <div className="loading-spinner">
+            <div className="loading-ring" />
+          </div>
+          <p className="loading-text">
+            Loading movie details
+            <span className="loading-dots" />
+          </p>
+        </div>
+      </div>
+    );
   }
 
   //Error page section
